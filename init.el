@@ -36,6 +36,13 @@
 
 (global-linum-mode t)
 
+;; modify ibuffer-formats to set name column wider
+(setq ibuffer-formats
+      '((mark modified read-only " "
+              (name 40 40 :left :elide) " " filename)
+        (mark " "
+              (name 16 -1) " " filename)))
+
 (load-theme 'cyberpunk t)
 (windmove-default-keybindings)
 (defalias 'yes-or-no-p 'y-or-n-p)
