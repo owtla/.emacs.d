@@ -1,4 +1,4 @@
-# kpurdon/.emacs.d
+# owtla/.emacs.d
 
 My personal emacs configuration. This configuration is built to work with [Emacs for MacOSX](http://emacsformacosx.com/) and is last tested on:
 
