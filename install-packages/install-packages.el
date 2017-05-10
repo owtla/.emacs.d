@@ -51,9 +51,4 @@
 
 (provide 'install-packages)
 
-;; Turn off line numbers in terminals and other appropriate modes
-(add-hook 'after-change-major-mode-hook
-            '(lambda ()
-               (linum-mode (if (or (equal major-mode 'ansi-mode) (equal major-mode 'eshell-mode) (equal major-mode 'term-mode) (equal major-mode 'help-mode) (equal major-mode 'text-mode)) 0 1))))
-
 ;;; install-packages.el ends here
