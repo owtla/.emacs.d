@@ -12,10 +12,13 @@
 
 (defvar my-packages
   '(better-defaults
+    cl-format
+    cl-generic
     cyberpunk-theme
     elpy
     exec-path-from-shell
     flycheck
+    git
     go-add-tags
     go-autocomplete
     go-eldoc
@@ -29,6 +32,7 @@
     osx-clipboard
     py-autopep8
     rainbow-delimiters
+    seq
     smart-mode-line
     web-mode
     yaml-mode))
@@ -46,5 +50,10 @@
     (package-install p)))
 
 (provide 'install-packages)
+
+;; Turn off line numbers in terminals and other appropriate modes
+(add-hook 'after-change-major-mode-hook
+            '(lambda ()
+               (linum-mode (if (or (equal major-mode 'ansi-mode) (equal major-mode 'eshell-mode) (equal major-mode 'term-mode) (equal major-mode 'help-mode) (equal major-mode 'text-mode)) 0 1))))
 
 ;;; install-packages.el ends here
