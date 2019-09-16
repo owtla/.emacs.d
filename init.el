@@ -71,7 +71,6 @@
 (add-hook 'after-change-major-mode-hook
           '(lambda ()
                    (linum-mode (if (or (equal major-mode 'ansi-mode)
-                                       (equal major-mode 'custom-mode)
                                        (equal major-mode 'eshell-mode)
                                        (equal major-mode 'eww-mode)
                                        (equal major-mode 'help-mode)
